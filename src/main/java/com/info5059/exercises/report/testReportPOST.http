@@ -1,0 +1,7 @@
+POST http://localhost:8080/api/reports
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id":0,"items":[{"id":0,"reportid":0,"expenseid":1},{"id":0,"reportid":0,"expenseid":2}],"employeeid":1}
+###

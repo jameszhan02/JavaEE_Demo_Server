@@ -1,4 +1,4 @@
-package com.info5059.exercises;
+package com.info5059.exercises.employee;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

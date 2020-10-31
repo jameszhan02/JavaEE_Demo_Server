@@ -1,11 +1,12 @@
-package com.info5059.exercises;
+package com.info5059.exercises.employee;
 
+import com.info5059.exercises.expense.Expense;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Data
@@ -19,4 +20,8 @@ public class Employee {
     private String lastname;
     private String phoneno;
     private String email;
+    @OneToMany(mappedBy = "employeeid", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Expense> expenses = new HashSet<>();
+
 }
+
